@@ -2,7 +2,6 @@ const jwt = require("jsonwebtoken");
 const path = require("path");
 const fs = require("fs");
 const authenModel = require("../models/authen.model");
-
 const privateKey = fs.readFileSync(
   path.join(__dirname, "../../sck", "private.key")
 );
