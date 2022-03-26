@@ -401,7 +401,7 @@ const createUnitListProductCore = async (obj) => {
 const selectAllProductCore = async (page) => {
   const itemsPerPage = 20;
   const offset = (parseInt(page) - 1) * itemsPerPage;
-  sql = `SELECT procore_id,procore_name,procore_photo FROM product_core WHERE is_deleted != 99 ORDER BY procore_id ASC LIMIT ${itemsPerPage} OFFSET ${offset}`;
+  sql = `SELECT id,procore_id,procore_name,procore_photo FROM product_core WHERE is_deleted != 99 ORDER BY procore_id ASC LIMIT ${itemsPerPage} OFFSET ${offset}`;
   try {
     const result = await pgDB.query(sql);
     data = {

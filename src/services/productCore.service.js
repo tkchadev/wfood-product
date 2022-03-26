@@ -86,8 +86,8 @@ const createProductCore = async (objToken, objCore, objPrice) => {
     }
   }
 
-  // test
-  let items = JSON.parse(objPrice.list_price);
+  let items = JSON.parse(objPrice.list_price)
+
   let arrUnitCore = [];
   for (let i = 0; i < items.length; i++) {
     let item = {
@@ -140,7 +140,8 @@ const createProductCore = async (objToken, objCore, objPrice) => {
   } else {
     return resCore;
   }
- 
+
+  return { status: true };
 };
 
 const selectAllProductCore = async (page) => {
@@ -257,7 +258,7 @@ const deleteProductCore = async (obj) => {
     return resList;
   }
   data = {
-    tatus: true,
+    status: true,
     message: `Delete Success`,
     result: [],
   };
